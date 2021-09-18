@@ -32,7 +32,7 @@ class Blog(models.Model):
     title = models.CharField(max_length=255)
     slug = models.CharField(max_length=300)
     desc = models.CharField(max_length=1000)
-    cover_image = models.ImageField(upload_to='uploads/blog')
+    cover_image = models.ImageField(upload_to='uploads/blog', null=True, blank=True)
 
     create_at = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
